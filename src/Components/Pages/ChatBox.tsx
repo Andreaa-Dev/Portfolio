@@ -8,7 +8,7 @@ function ChatBox() {
     hideBotAvatar: false,
     hideHeader: true,
     bubbleStyle: {
-      background: "#ff1e56",
+      background: "#ba17fa",
     },
   };
   const history = useHistory();
@@ -18,7 +18,7 @@ function ChatBox() {
   const steps = [
     {
       id: "greet",
-      message: "Hello, My name is Duy",
+      message: "Hello, My name is Ngoc Anh and you can call me Andrea",
       trigger: "ask username",
     },
     {

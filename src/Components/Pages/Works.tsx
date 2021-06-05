@@ -16,7 +16,7 @@ const Card = styled.div`
   color: white;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-bottom: 5rem;
 `;
 const Title = styled.h1`
@@ -32,7 +32,7 @@ const Items = styled.div`
   cursor: pointer;
   transition: 0.5s;
   :hover {
-    transform: scale(1.5) translate(-10%, -10%);
+    transform: scale(1.2) translate(-10%, -10%);
   }
 `;
 const Box = styled.div`
@@ -72,7 +72,7 @@ function Works() {
         <Items>JavaScript</Items>
         <Items>TypeScript</Items>
         <Items>React</Items>
-        <div></div>
+        <Items>Libraries and Figma </Items>
       </Card>
       <div>
         <Box>
@@ -80,7 +80,13 @@ function Works() {
           <div>
             <Text>Burger Heaven</Text>
             <p>Description: JavaScript, CSS, React, Redux, Styled-components</p>
-            <Button>GitHub Link</Button>
+            <a
+              href="https://github.com/Andreaa-Dev/Burger-restaurant"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button>GitHub Link</Button>
+            </a>
           </div>
         </Box>
         <Box>
