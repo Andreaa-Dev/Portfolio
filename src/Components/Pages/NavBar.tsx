@@ -2,8 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import logo from "../Img&Video/logo.png";
-
 const NavBarStyle = styled.div`
   display: flex;
   flex-direction: row;
