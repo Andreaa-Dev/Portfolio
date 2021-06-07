@@ -26,7 +26,6 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Item>
-            {" "}
             <ChatBox />
           </Item>
         </Route>
