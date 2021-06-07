@@ -9,7 +9,7 @@ function ChatBox() {
     hideHeader: false,
     bubbleStyle: {
       background: "#6707a2",
-      color: "black",
+      color: "white",
     },
   };
   const history = useHistory();

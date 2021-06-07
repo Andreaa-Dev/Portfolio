@@ -23,6 +23,12 @@ const Img = styled.img`
   @media (max-width: 1200px) {
     margin-left: 0;
   }
+  /* @media (min-width: 15200px) {
+    height: 45rem;
+    width: 45rem;
+    margin-top: 15rem;
+    margin-left: 10rem;
+  } */
 `;
 const Text = styled.div`
   display: flex;
@@ -30,6 +36,10 @@ const Text = styled.div`
   align-items: flex-start;
   font-weight: 700;
   margin-top: 7rem;
+  /* @media (max-width: 15200px) {
+    font-size: 5rem;
+    margin-top: 25rem;
+  } */
 `;
 const P1 = styled.p`
   color: white;
@@ -75,7 +85,7 @@ const Logo = styled.svg`
   color: white;
   stroke-dasharray: 400px;
   stroke-dashoffset: 300px;
-  animation: dash 4s ease forwards 4s;
+  animation: dash 4s ease forwards 1s;
   @keyframes dash {
     to {
       stroke-dashoffset: 0;

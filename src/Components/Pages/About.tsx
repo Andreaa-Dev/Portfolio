@@ -11,23 +11,34 @@ const MainCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #1c1a1a;
 `;
 const Title = styled.h1`
   font-family: "Lobster", cursive;
   font-size: 3rem;
   color: white;
   margin-bottom: 0;
+  /* @media (max-width: 15200px) {
+    font-size: 7rem;
+  } */
 `;
 
 const Text = styled.p`
   color: white;
   margin-top: 0;
   margin-bottom: 2rem;
+  /* @media (max-width: 15200px) {
+    font-size: 2rem;
+  } */
 `;
 const Card = styled.div`
   background-color: white;
   width: 50%;
-  /* height: 50%; */
+  border-radius: 7px;
+
+  /* @media (max-width: 15200px) {
+    height: 30rem;
+  } */
 `;
 const Button = styled.button`
   height: 2rem;
@@ -53,6 +64,11 @@ const Button = styled.button`
     box-shadow: 0 0 white;
     top: 6px;
   }
+  /* @media (max-width: 45200px) {
+    font-size: 2rem;
+    height: 3rem;
+    width: 8rem;
+  } */
 `;
 
 const IconCard = styled.div`
@@ -61,12 +77,15 @@ const IconCard = styled.div`
   justify-content: space-around;
   width: 30%;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
+  /* @media (max-width: 15200px) {
+    height: 5rem;
+  } */
 `;
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
-      margin: theme.spacing(1),
+      margin: theme.spacing(2),
       width: "25ch",
     },
   },
