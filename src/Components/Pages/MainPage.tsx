@@ -109,7 +109,12 @@ function MainPage() {
     const text3 = content3.current;
     const button4 = content4.current;
 
-    tl.staggerFrom(text1, 1, { y: 20, opacity: 0, ease: Power3.easeOut }, 1.4);
+    tl.staggerFrom(
+      text1,
+      1,
+      { top: 20, opacity: 0, ease: Power3.easeOut },
+      1.4
+    );
     tl.staggerFrom(text2, 1, { y: 20, opacity: 0, ease: Power3.easeOut }, 1.5);
     tl.staggerFrom(text3, 1, { y: 20, opacity: 0, ease: Power3.easeOut }, 1.6);
     tl.staggerFrom(
