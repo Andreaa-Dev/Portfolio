@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 //@ts-ignore
 import styled from "styled-components";
 import MainPageImg from "../Img&Video/girl1.png";
-import { TimelineLite, Power3 } from "gsap";
+import { TimelineLite, Power3, TweenMax } from "gsap";
 
 const Card = styled.div`
   display: flex;
@@ -97,24 +97,17 @@ const CustomLink = styled(Link)`
   color: white;
 `;
 function MainPage() {
-  let content1 = useRef<any>(null);
   let content2 = useRef<any>(null);
   let content3 = useRef<any>(null);
   let content4 = useRef<any>(null);
 
   useEffect(() => {
     let tl = new TimelineLite({ delay: 0.01 });
-    const text1 = content1.current;
+
     const text2 = content2.current;
     const text3 = content3.current;
     const button4 = content4.current;
 
-    tl.staggerFrom(
-      text1,
-      1,
-      { top: 20, opacity: 0, ease: Power3.easeOut },
-      1.4
-    );
     tl.staggerFrom(text2, 1, { y: 20, opacity: 0, ease: Power3.easeOut }, 1.5);
     tl.staggerFrom(text3, 1, { y: 20, opacity: 0, ease: Power3.easeOut }, 1.6);
     tl.staggerFrom(
@@ -130,7 +123,7 @@ function MainPage() {
       <Card>
         <Text>
           <Logo
-            ref={content1}
+            id="logo"
             width="378"
             height="78"
             viewBox="0 0 378 78"
