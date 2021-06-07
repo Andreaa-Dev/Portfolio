@@ -29,7 +29,6 @@ const Title = styled.h1`
 `;
 const Text = styled.p`
   font-size: 1rem;
-  color: white;
   padding: 0;
 `;
 const CustomLink = styled(Link)`
@@ -48,7 +47,7 @@ function NavBar() {
           <CustomLink to="/works">WORKS</CustomLink>
         </Text>
         <Text>
-          <CustomLink to="/about">About me</CustomLink>
+          <CustomLink to="/about">CONTACT</CustomLink>
         </Text>
       </Card>
     </NavBarStyle>

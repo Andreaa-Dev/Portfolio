@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+
 //@ts-ignore
 import styled from "styled-components";
-import MainPageImg from "../Img&Video/MainPageImg.png";
+import MainPageImg from "../Img&Video/girl1.png";
 import { TimelineLite, Power3 } from "gsap";
 
 const Card = styled.div`
@@ -10,10 +12,17 @@ const Card = styled.div`
   margin-left: 8rem;
 `;
 const Img = styled.img`
-  margin-left: 7rem;
-  margin-top: 2rem;
+  border-radius: 50%;
+  margin-left: 13rem;
+  margin-top: 5rem;
+  height: 25rem;
+  width: 25rem;
+  background-color: #e12b49;
   cursor: pointer;
   transition: 0.5s;
+  @media (max-width: 1200px) {
+    margin-left: 0;
+  }
 `;
 const Text = styled.div`
   display: flex;
@@ -25,7 +34,8 @@ const Text = styled.div`
 const P1 = styled.p`
   color: white;
   font-size: 2rem;
-  margin: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
   background-color: #1c1a1a;
   overflow: hidden;
   :span {
@@ -40,17 +50,24 @@ const P2 = styled.p`
 `;
 
 const Button = styled.button`
+  height: 2rem;
+  width: 7rem;
+  color: white;
   background-color: #1c1a1a;
   border: solid #e12b49 0.1rem;
   border-radius: 1rem;
-  height: 2rem;
-  width: 7rem;
-  color: #e12b49;
+  cursor: pointer;
+  display: block;
+  position: relative;
   margin-top: 1rem;
-  box-shadow: 0 0.1rem #e12b49;
+  box-shadow: 0 1px #e12b49;
   :hover {
-    border: solid #e12b49 0.1rem;
-    background-color: white;
+    box-shadow: 0 1px #e12b49;
+    top: 2px;
+  }
+  :active {
+    box-shadow: 0 0 #e12b49;
+    top: 6px;
   }
 `;
 
@@ -58,26 +75,39 @@ const Logo = styled.svg`
   color: white;
   stroke-dasharray: 400px;
   stroke-dashoffset: 300px;
-  animation: dash 2s ease forwards;
+  animation: dash 4s ease forwards 4s;
   @keyframes dash {
     to {
       stroke-dashoffset: 0;
     }
   }
 `;
-
+const CustomLink = styled(Link)`
+  text-decoration: none;
+  color: white;
+`;
 function MainPage() {
-  let app = useRef<HTMLDivElement>(null);
   let content1 = useRef<any>(null);
   let content2 = useRef<any>(null);
+  let content3 = useRef<any>(null);
+  let content4 = useRef<any>(null);
 
   useEffect(() => {
-    let tl = new TimelineLite({ delay: 0.1 });
+    let tl = new TimelineLite({ delay: 0.01 });
     const text1 = content1.current;
     const text2 = content2.current;
+    const text3 = content3.current;
+    const button4 = content4.current;
 
     tl.staggerFrom(text1, 1, { y: 20, opacity: 0, ease: Power3.easeOut }, 1.4);
-    tl.staggerFrom(text2, 2, { y: 20, opacity: 0, ease: Power3.easeOut }, 1.5);
+    tl.staggerFrom(text2, 1, { y: 20, opacity: 0, ease: Power3.easeOut }, 1.5);
+    tl.staggerFrom(text3, 1, { y: 20, opacity: 0, ease: Power3.easeOut }, 1.6);
+    tl.staggerFrom(
+      button4,
+      1,
+      { y: 20, opacity: 0, ease: Power3.easeOut },
+      1.7
+    );
   }, []);
 
   return (
@@ -85,6 +115,7 @@ function MainPage() {
       <Card>
         <Text>
           <Logo
+            ref={content1}
             width="378"
             height="78"
             viewBox="0 0 378 78"
@@ -188,11 +219,13 @@ function MainPage() {
               </filter>
             </defs>
           </Logo>
-          <P1 ref={content1}>Web developer</P1>
-          <P2 ref={content2}>CSS/JavarScript/React</P2>
-          <Button>Contact me</Button>
+          <P1 ref={content2}>Web developer</P1>
+          <P2 ref={content3}>CSS/JavarScript/React</P2>
+          <Button ref={content4}>
+            <CustomLink to="/about">CONTACT ME</CustomLink>
+          </Button>
         </Text>
-        <Img w3-center w3-animate-fading src={MainPageImg} alt="" />
+        <Img src={MainPageImg} alt="error" />
       </Card>
     </div>
   );

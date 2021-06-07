@@ -6,9 +6,10 @@ import CustomChatbot from "react-simple-chatbot";
 function ChatBox() {
   const config = {
     hideBotAvatar: false,
-    hideHeader: true,
+    hideHeader: false,
     bubbleStyle: {
-      background: "#ba17fa",
+      background: "#6707a2",
+      color: "black",
     },
   };
   const history = useHistory();
@@ -18,7 +19,7 @@ function ChatBox() {
   const steps = [
     {
       id: "greet",
-      message: "Hello, My name is Ngoc Anh and you can call me Andrea",
+      message: "Hello, My name is Ngoc Anh and you can call me Andrea.",
       trigger: "ask username",
     },
     {
@@ -39,28 +40,33 @@ function ChatBox() {
     {
       id: "ask user purpose",
       message:
-        "You must be here to check out my portfolio, is that correct ? 😀",
+        "You must be here to check out my portfolio, is that correct ? 😉 ",
       trigger: "ask me",
     },
+
     {
       id: "ask me",
-      message:
-        "You must be here to check out my portfolio, is that correct ? 😀",
-      trigger: "intro",
-    },
-    {
-      id: "intro",
-      message: "Let me show you more about what I have learned",
-      trigger: "ok",
-    },
-    {
-      id: "ok",
-      options: [{ value: "ok", label: "Ok", trigger: "transition" }],
+      options: [{ value: "ok", label: "Yes", trigger: "transition" }],
+      trigger: "transition",
     },
     {
       id: "transition",
-      message: "take a look on the right side",
+      message:
+        "I am a Font-End Developer based in Helsinki, Finland. I have passion for creating beautiful website with  UI effects and animation",
+      trigger: "introduction",
+    },
 
+    {
+      id: "introduction",
+      message: "Let me show you more about what I have done",
+      trigger: "next",
+    },
+
+    {
+      id: "next",
+      options: [
+        { value: "ok", label: "Let's go !!! 😊", trigger: "portfolio" },
+      ],
       trigger: "portfolio",
     },
     {
