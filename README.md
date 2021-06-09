@@ -7,7 +7,7 @@ The first page is an auto chat-box:
 
 Main page:
 
-<img src="hhttps://user-images.githubusercontent.com/73385243/121425044-a8326480-c97a-11eb-9340-b58bd6fdf211.png" width="400" height="250">
+<img src="https://user-images.githubusercontent.com/73385243/121425283-e891e280-c97a-11eb-968b-56dc1e869d92.png" width="400" height="250">
 
 Nice to meet and hope to work with you some day.
 
