@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import MainPageImg from "../Img&Video/girl1.png";
 import { TimelineLite, Power3, TweenMax } from "gsap";
+// gsap.registerPlugin(MotionPathPlugin, TextPlugin);
 
 const Card = styled.div`
   display: flex;
@@ -18,17 +19,19 @@ const Img = styled.img`
   height: 25rem;
   width: 25rem;
   background-color: #e12b49;
-  cursor: pointer;
-  transition: 0.5s;
+  animation: show 3s ease forwards 1s;
+  @keyframes show {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
   @media (max-width: 1200px) {
     margin-left: 0;
   }
-  /* @media (min-width: 15200px) {
-    height: 45rem;
-    width: 45rem;
-    margin-top: 15rem;
-    margin-left: 10rem;
-  } */
 `;
 const Text = styled.div`
   display: flex;
@@ -36,10 +39,11 @@ const Text = styled.div`
   align-items: flex-start;
   font-weight: 700;
   margin-top: 7rem;
-  /* @media (max-width: 15200px) {
-    font-size: 5rem;
-    margin-top: 25rem;
-  } */
+  overflow: hidden;
+  :span {
+    transform: translateY(100%);
+    display: inline-block;
+  }
 `;
 const P1 = styled.p`
   color: white;
@@ -47,16 +51,36 @@ const P1 = styled.p`
   margin-top: 1rem;
   margin-bottom: 0;
   background-color: #1c1a1a;
-  overflow: hidden;
-  :span {
-    transform: translateY(100%);
-    display: inline-block;
-  }
+
+  /* animation: show 3s ease forwards 1s; */
+  /* @keyframes show {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  } */
 `;
 
 const P2 = styled.p`
   color: #c9c6c6;
   margin: 0rem;
+  /* animation: show 3s ease forwards 2s; */
+  /* @keyframes show {
+    from {
+      transform: scale(0);
+      /* opacity: -10; */
+  /* transform: translateY(10px);
+    }
+    to {
+      transform: scale(1); */
+  /* opacity: 1; */
+  /* transform: translateY(0); */
+  /* } */
+  /* } */
 `;
 
 const Button = styled.button`
@@ -116,6 +140,8 @@ function MainPage() {
       { y: 20, opacity: 0, ease: Power3.easeOut },
       1.7
     );
+    console.log("text2", text2);
+    console.log("text3", text3);
   }, []);
 
   return (
