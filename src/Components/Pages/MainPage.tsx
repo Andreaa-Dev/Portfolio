@@ -51,36 +51,11 @@ const P1 = styled.p`
   margin-top: 1rem;
   margin-bottom: 0;
   background-color: #1c1a1a;
-
-  /* animation: show 3s ease forwards 1s; */
-  /* @keyframes show {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  } */
 `;
 
 const P2 = styled.p`
   color: #c9c6c6;
   margin: 0rem;
-  /* animation: show 3s ease forwards 2s; */
-  /* @keyframes show {
-    from {
-      transform: scale(0);
-      /* opacity: -10; */
-  /* transform: translateY(10px);
-    }
-    to {
-      transform: scale(1); */
-  /* opacity: 1; */
-  /* transform: translateY(0); */
-  /* } */
-  /* } */
 `;
 
 const Button = styled.button`

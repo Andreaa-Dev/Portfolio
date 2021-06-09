@@ -13,7 +13,6 @@ const MainCard = styled.div`
   background-size: cover;
   margin: 0;
   padding: 0;
-  /* height: 100%; */
   width: 100%;
 `;
 
@@ -127,7 +126,7 @@ function Works() {
       </Card>
       <Text>
         Others: Class components, Libraries:Material UI, Styled-Component,
-        Responsive website, and Figma.
+        Responsive website, GSAP and Figma.
       </Text>
 
       <div>

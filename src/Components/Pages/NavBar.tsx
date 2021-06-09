@@ -23,7 +23,6 @@ const Title = styled.h1`
   color: white;
   margin: auto;
   margin-left: 1rem;
-  /* margin: 1rem auto 1rem auto; */
 `;
 const Text = styled.p`
   font-size: 1rem;
