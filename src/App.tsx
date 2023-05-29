@@ -3,11 +3,11 @@ import "./App.css";
 import styled from "styled-components";
 import { Route, Switch } from "react-router-dom";
 
-import NavBar from "./Components/Pages/NavBar";
-import ChatBox from "./Components/Pages/ChatBox";
-import About from "./Components/Pages/About";
-import Works from "./Components/Pages/Works";
-import MainPage from "./Components/Pages/MainPage";
+import NavBar from "./components/Pages/NavBar";
+import ChatBox from "./components/Pages/ChatBox";
+import About from "./components/Pages/About";
+import Works from "./components/Pages/Works";
+import MainPage from "./components/Pages/MainPage";
 
 const Card = styled.div`
   background-color: #1c1a1a;

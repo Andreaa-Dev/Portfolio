@@ -51,8 +51,7 @@ function ChatBox() {
     },
     {
       id: "transition",
-      message:
-        "I am a Font-End Developer based in Helsinki, Finland. I have passion for creating beautiful website with  UI effects and animation",
+      message: "I am a Full-stack Developer based in Helsinki, Finland.",
       trigger: "introduction",
     },
 

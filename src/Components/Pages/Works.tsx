@@ -97,6 +97,12 @@ const Icon = styled(FontAwesomeIcon)`
     transition: transform 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
 `;
+const SubText = styled.p`
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  font-size: 2rem;
+`;
 const Text = styled.p`
   text-align: center;
   color: white;
@@ -118,16 +124,16 @@ function Works() {
     <MainCard>
       <Title>I'm familiar with</Title>
       <Card>
-        <Items>HTML</Items>
-        <Items>CSS</Items>
         <Items>JavaScript</Items>
         <Items>TypeScript</Items>
         <Items>React</Items>
+        <Items>Node</Items>
+        <Items>MongoDB</Items>
+        <Items>SQL</Items>
+        <Items>Jest</Items>
       </Card>
-      <Text>
-        Others: Class components, Libraries:Material UI, Styled-Component,
-        Responsive website, GSAP and Figma.
-      </Text>
+      <SubText> DevOp: CI-CD,Docker,Bash Scripting</SubText>
+      <Text>Others: HTML, CSS, Express, MUI, GSAP and Figma</Text>
 
       <div>
         <Box>
